@@ -1,0 +1,28 @@
+Shopping cart using java bean and EL:
+
+To display the xml data we use JSTL (JSP Standard Tag Library).
+I used the followinng resource:
+JSP - XML Data: http://www.tutorialspoint.com/jsp/jsp_xml_data.htm 
+As it is described we have to download two jar files and copy them into your <Tomcat Installation Directory>\lib, but it's better for our purpose to copy them in the project folder WEB_INF/lib/.
+Also only these two jar files are not enough and we need to add also the file batik-ext-1.7.jar, which we can dowload from here:
+http://www.jarfinder.com/index.php/jars/versionInfo/16905 
+or directly from 
+http://mirrors.ibiblio.org/pub/mirrors/maven2/org/apache/xmlgraphics/batik-ext/1.7/batik-ext-1.7.jar
+With these tree jar files our project is working already.
+
+For cookies we use the tag library described in the following tutorial:
+Cookie taglib ver. 2.0: http://www.servletsuite.com/servlets/cooktag.htm
+We have to put in our project the jar file and the tld file, which we can also download from that page.
+
+We use the following java classes:
+1)class Item
+- properties: price, quantity
+- methods: getPrice, setPrice, getQuantity, setQuantity, calculateItemTotal
+2)class Cart
+- properties: items (array list from Item objects)
+- methods: getItems, setItems, isCartCreated, createItems, getItem, calculateAllItemsTotal
+Get the idea from: http://forums.devx.com/showthread.php?t=154627
+
+To use these classes with script-free jsp pages:
+Call JavaBean methods from JSP 2.0 pages: http://www.javaworld.com/javaworld/jw-05-2003/jw-0523-calltag.html?page=2 (pages 2 and 3)
+
