@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>functions</short-name>
+  <uri>/WEB-INF/tlds/functions</uri>
+  <!-- A validator verifies that the tags are used correctly at JSP
+         translation time. Validator entries look like this: 
+      <validator>
+          <validator-class>com.mycompany.TagLibValidator</validator-class>
+          <init-param>
+             <param-name>parameter</param-name>
+             <param-value>value</param-value>
+	  </init-param>
+      </validator>
+   -->
+  <!-- A tag library can register Servlet Context event listeners in
+        case it needs to react to such events. Listener entries look
+        like this: 
+     <listener>
+         <listener-class>com.mycompany.TagLibListener</listener-class> 
+     </listener>
+   -->
+   <function>
+       <name>createItems</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>void createItems(org.mypackage.cart.Cart, java.lang.String)</function-signature>
+   </function>
+   <function>
+       <name>isCartCreated</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>java.lang.String isCartCreated(org.mypackage.cart.Cart)</function-signature>
+   </function>
+   <function>
+       <name>setItemPrice</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>void setItemPrice(org.mypackage.cart.Cart, java.lang.String, java.lang.String)</function-signature>
+   </function>  
+   <function>
+       <name>getItemQuantity</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>java.lang.String getItemQuantity(org.mypackage.cart.Cart, java.lang.String)</function-signature>
+   </function>  
+   <function>
+       <name>setItemQuantity</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>void setItemQuantity(org.mypackage.cart.Cart, java.lang.String, java.lang.String)</function-signature>
+   </function>   
+   <function>
+       <name>calculateItemTotal</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>java.lang.String calculateItemTotal(org.mypackage.cart.Cart, java.lang.String)</function-signature>
+   </function>
+   <function>
+       <name>calculateAllItemsTotal</name>
+       <function-class>org.mypackage.cart.Functions</function-class>
+       <function-signature>java.lang.String calculateAllItemsTotal(org.mypackage.cart.Cart)</function-signature>
+   </function>
+</taglib>
